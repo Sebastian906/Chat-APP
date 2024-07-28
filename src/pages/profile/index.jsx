@@ -1,9 +1,13 @@
-import React from 'react'
+import { useAppStore } from '@/store'
 
 const Profile = () => {
-    return (
-        <div>Profile</div>
-    )
-}
+    const { userInfo } = useAppStore();
+    return ( 
+        <div>
+            Profile
+            {<div>Correo: {userInfo.id}</div>}
+        </div>
+    );
+};
 
 export default Profile
